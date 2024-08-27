@@ -1,5 +1,5 @@
 import pyautogui
-from src.utils.image_matching import find_image_in_screenshot
+from .image_matching import find_image_in_screenshot
 
 def click_image_in_screenshot(template_path, screenshot, offset_left, offset_top, threshold=0.8):
     locations, w, h = find_image_in_screenshot(template_path, screenshot, threshold)
@@ -11,3 +11,4 @@ def click_image_in_screenshot(template_path, screenshot, offset_left, offset_top
             print(f"点击位置 ({screen_x}, {screen_y})")
     else:
         print("未找到图像，未进行点击操作。")
+

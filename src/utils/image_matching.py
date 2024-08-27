@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-def find_image_in_screenshot(template_path, screenshot, threshold=0.8):
+def find_image_in_screenshot(template_path, screenshot, threshold):
     print(f"尝试从以下路径加载模板图像: {template_path}")
     template = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
     if template is None:
